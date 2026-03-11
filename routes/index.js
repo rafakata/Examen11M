@@ -5,7 +5,6 @@ const path = require('path');
 
 router.get('/', (req, res) => res.render('index'));
 
-// API para servir el GeoJSON
 router.get('/api/monumentos', (req, res) => {
     // IMPORTANTE: Asegúrate de que el archivo esté en /data/monumentos.geojson
     const geojsonPath = path.join(__dirname, '../data/monumentos.geojson');
@@ -17,7 +16,6 @@ router.get('/api/monumentos', (req, res) => {
     }
 });
 
-// Login solicitado: admin / 1234
 router.post('/login', (req, res) => {
     const { username, password } = req.body;
     if (username === 'admin' && password === '1234') {
