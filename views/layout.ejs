@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monumentos Málaga</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-primary shadow-sm">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="/"><strong>Monumentos Málaga</strong></a>
+            <div>
+                <% if (isLogged) { %>
+                    <a href="/logout" class="btn btn-outline-danger btn-sm">Logout</a>
+                <% } else { %>
+                    <button class="btn btn-outline-warning btn-sm" id="btnAuth">Login</button>
+                <% } %>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <%- body %>
+    </main>
+
+    <footer class="bg-primary text-white text-center py-2 small">
+        <small>Examen de Rafael Medina Quelle-2º de DAW-Málaga</small>
+    </footer>
+
+    <script src="/javascripts/auth.js"></script>
+</body>
+</html>

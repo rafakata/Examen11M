@@ -1,0 +1,8 @@
+        body, html { height: 100%; margin: 0; padding: 0; overflow: hidden; }
+        footer { height: 36px; flex-shrink: 0; }
+        .main-container { height: calc(100vh - 56px - 36px); } 
+        #map { height: 100%; width: 100%; }
+        .sidebar { height: 100%; overflow-y: auto; border-left: 1px solid #dee2e6; background: white; }
+        .fav-btn { border: none; background: none; font-size: 1.4rem; cursor: pointer; transition: 0.3s; }
+        .fav-off { color: #ccc; }
+        .fav-on { color: #e74c3c; }
